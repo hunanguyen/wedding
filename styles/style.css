@@ -353,6 +353,22 @@ header .navbar-brand {
 
 .wrapper {}
 
+/* Contain overflow on mobile */
+.wrapper,
+section {
+  overflow-x: hidden;
+}
+
+.main_image_area .bg-title {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe,
+table {
+  max-width: 100%;
+}
+
 /* Banner Section */
 .main_area {
   position: relative;
