@@ -953,3 +953,7 @@ button#btn-submit-comment:hover {
     top: 62px !important;
   }
 }
+html, body {
+  overflow-x: hidden;
+}
+
