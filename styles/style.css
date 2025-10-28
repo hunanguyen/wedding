@@ -14,43 +14,6 @@ body {
   font-family: "Bellota Text", cursive;
 }
 
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Prevent horizontal scroll and ensure responsive media on mobile (incl. iPhone 14 Pro Max) */
-img,
-video,
-canvas,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-.container,
-.container-fluid,
-.row {
-  overflow-x: hidden;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  touch-action: manipulation;
-}
-
-input,
-textarea,
-select,
-button {
-  font-size: 16px;
-}
-
 .section-bg-affect:nth-child(even) {
   background-color: #f9f9f9;
 }
@@ -352,22 +315,6 @@ header .navbar-brand {
 }
 
 .wrapper {}
-
-/* Contain overflow on mobile */
-.wrapper,
-section {
-  overflow-x: hidden;
-}
-
-.main_image_area .bg-title {
-  max-width: 100%;
-  height: auto;
-}
-
-iframe,
-table {
-  max-width: 100%;
-}
 
 /* Banner Section */
 .main_area {
