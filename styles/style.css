@@ -419,7 +419,18 @@ header .navbar-brand {
 
 .lg-backdrop,
 .lg-outer {
-  z-index: 9999999;
+  z-index: 9999999999;
+}
+
+.lg-toolbar, .lg-icon, .lg-close, .lg-prev, .lg-next {
+  color: #fff !important;          /* màu trắng sáng */
+  fill: #fff !important;           /* cho SVG */
+  opacity: 1 !important;           /* đảm bảo không trong suốt */
+  z-index: 999999 !important;      /* nổi lên trên */
+}
+
+.lg-toolbar {
+  background: rgba(0, 0, 0, 0.3) !important; /* làm thanh công cụ nổi nhẹ */
 }
 
 .gallery-item {
