@@ -417,20 +417,53 @@ header .navbar-brand {
   border-color: #636363;
 }
 
+/* Bảo đảm overlay, toolbar, nút đều nằm trên cùng */
 .lg-backdrop,
 .lg-outer {
-  z-index: 9999999999;
+  z-index: 9999999999 !important;
 }
 
-.lg-toolbar, .lg-icon, .lg-close, .lg-prev, .lg-next {
-  color: #fff !important;          /* màu trắng sáng */
-  fill: #fff !important;           /* cho SVG */
-  opacity: 1 !important;           /* đảm bảo không trong suốt */
-  z-index: 999999 !important;      /* nổi lên trên */
+/* Làm icon sáng rõ dù nền tối hoặc sáng */
+.lg-toolbar,
+.lg-icon,
+.lg-close,
+.lg-prev,
+.lg-next {
+  color: #fff !important;
+  fill: #fff !important;
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.3) !important; /* thêm nền mờ cho SVG dạng mask */
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  z-index: 1000000 !important;
 }
 
+/* Khi hover, sáng hơn để dễ thấy */
+.lg-icon:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+}
+
+/* Làm thanh công cụ nổi rõ */
 .lg-toolbar {
-  background: rgba(0, 0, 0, 0.3) !important; /* làm thanh công cụ nổi nhẹ */
+  background: rgba(0, 0, 0, 0.4) !important;
+  z-index: 1000001 !important;
+}
+
+/* Fix prev/next bị ẩn khi nền đen */
+.lg-prev,
+.lg-next {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Phần nền gallery */
+.lg-backdrop {
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Bảo đảm click được toàn bộ */
+.lg-outer * {
+  pointer-events: auto !important;
 }
 
 .gallery-item {

@@ -8383,19 +8383,6 @@ $("document").ready(function ($) {
         });
     }
 
-    $(document).on('click', '.btn-see-more-gallery', function () {
-        let indexNumber = $(this).data('index') || 0;
-        $(this).lightGallery({
-            dynamic: true,
-            dynamicEl: photoGalleries,
-            download: false,
-            autoplay: true,
-            preload: 2,
-            appendSubHtmlTo: '.lg-item',
-            index: parseInt(indexNumber)
-        });
-    });
-
     $(document).on('click', '.qr-code-image', function () {
         let srcImage = $(this).attr('src');
         $(this).lightGallery({

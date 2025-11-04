@@ -1386,6 +1386,37 @@ Với cô: “Gặp được anh là định mệnh, yêu anh là lựa chọn m
 <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.umd.js"></script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const galleryContainer = document.getElementById('photoGalleryContainer');
+
+        // Đảm bảo gallery đã có ảnh
+        if (!photoGalleries || photoGalleries.length === 0) return;
+
+        // Gắn sự kiện click vào từng ảnh
+        galleryContainer.querySelectorAll('.gallery-item').forEach((el, index) => {
+            el.addEventListener('click', () => {
+                const lgInstance = lightGallery(galleryContainer, {
+                    dynamic: true,
+                    dynamicEl: photoGalleries, // dùng mảng đầy đủ
+                    closable: true,
+                    escKey: true,
+                    hideBarsDelay: 3000,
+                    thumbnail: true,
+                    download: false,
+                    licenseKey: "0000-0000-000-0000",
+                });
+
+                lgInstance.openGallery(index);
+
+                // lgInstance.on('lgAfterClose', () => {
+                //     lgInstance.destroy(true);
+                // });
+            });
+        });
+    });
+</script>
+
 <img src="./styles/heart.png" class="snowfall-flakes"
      style="width: 26.43px; height: 26.43px; position: absolute; font-size: 0px; z-index: 999999; top: 5561px; left: 1031.63px;"><img>
 <!--<audio src="https://cdn.biihappy.com/ziiweb/wedding-musics/IDo-911.mp3" controls="controls" loop=""-->
