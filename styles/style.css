@@ -424,7 +424,6 @@ header .navbar-brand {
 }
 
 /* Làm icon sáng rõ dù nền tối hoặc sáng */
-.lg-toolbar,
 .lg-icon,
 .lg-close,
 .lg-prev,
@@ -448,6 +447,7 @@ header .navbar-brand {
 .lg-toolbar {
   background: rgba(0, 0, 0, 0.4) !important;
   z-index: 1000001 !important;
+  display: none;
 }
 
 /* Fix prev/next bị ẩn khi nền đen */
